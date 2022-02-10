@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/inicio']">
+        <img src="https://static.wixstatic.com/media/490099_86fe23c6d3b24b91a297803a667984af~mv2_d_3291_4772_s_4_2.png/v1/crop/x_0,y_317,w_3291,h_4137/fill/w_598,h_704,al_c,q_90,usm_0.66_1.00_0.01/logo%20bimtrazer.webp" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        BimTrazer
+      </a>
+      
+      <a class="navbar-brand" [routerLink]="['/login']" *ngIf="usserLogged|async as user" (click)="logout()" >
+        <img style="border-radius: 100%" *ngIf="user.photoURL" src="{{user.photoURL}}"
+        width="30" height="30">
+        Salir
+       </a>
+    </div>
+
+  </nav>

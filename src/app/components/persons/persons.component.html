@@ -1,0 +1,23 @@
+<div class="container mt-3" *ngIf="usserLogged|async as user" >
+<table datatable [dtOptions]="dtOptions"class="datatable table table-striped table-bordered row-border hover">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of persons">
+            <td>{{person.Nombre}}</td>
+            <td>{{person.Apellido}}</td>
+            <td>{{person.Dni}}</td>
+            <td> <button class="btn btn-warning">
+                <mat-icon>info</mat-icon>
+            </button></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
