@@ -21,8 +21,7 @@ export class PersonsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 5
+      //pagingType: 'full_numbers'
     };
 
     this.personSvc.getPersons().pipe(

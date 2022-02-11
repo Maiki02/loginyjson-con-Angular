@@ -1,0 +1,25 @@
+<div class="container">
+
+<input [ngModel]="nombre" class="form-control mb-3 mt-3" type="text" name="nombre" placeholder="Nombre" (input)="agregarNombre($event)" required>
+<input  [ngModel]="apellido" class="form-control mb-3" type="text" name="apellido" placeholder="Apellido" (input)="agregarApellido($event)" required>
+<input  [ngModel]="dni" class="form-control mb-3" type="number" name="dni" placeholder="DNI" (input)="agregarDni($event)" required>
+<input type="submit" [disabled]="esBotonDesactivado" (click)="agregarPersona()" class="btn btn-sm btn-warning">
+
+</div>
+
+<div class="container registro">
+
+<p *ngIf="nombre!=''">Nombre: {{nombre}}</p>
+<p *ngIf="apellido!=''">Apellido: {{apellido}}</p>
+<p *ngIf="dni!=''">DNI: {{dni}}</p>
+</div>
+
+<div class="container personas-registradas" *ngIf="personas.length>0">
+  Registro personas
+  <ul>
+    <li *ngFor="let persona of personas">
+      {{persona.Nombre}}
+    </li>
+  </ul>
+
+</div>

@@ -12,11 +12,10 @@ export class LoginComponent {
   constructor(private authService:AuthService, private router:Router){
     this.verificarSiEstaLogueado();
   }
-  
+
   IngresarConGoogle():void{
     this.authService.loginWithGoogle().then(res => {
-    this.verificarSiEstaLogueado();
-
+      this.verificarSiEstaLogueado();
     })
 
   }
@@ -39,7 +38,7 @@ export class LoginComponent {
   logout(): void{
     this.authService.logout();
   }
-  
-  
+
+
 
 }

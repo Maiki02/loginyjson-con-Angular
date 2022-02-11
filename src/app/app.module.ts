@@ -13,6 +13,9 @@ import {MaterialModule} from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DataTablesModule} from 'angular-datatables';
 import {HttpClientModule} from '@angular/common/http';
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular';
+import * as Highcharts from 'highcharts';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     DataTablesModule,
+    ChartModule,
+    HighchartsChartModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
