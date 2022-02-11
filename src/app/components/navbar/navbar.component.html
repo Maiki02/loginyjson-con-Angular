@@ -13,7 +13,7 @@
 Graficas
 </a>
 
-      <a class="navbar-brand" [routerLink]="['/login']" *ngIf="usserLogged|async as user" (click)="logout()" >
+      <a class="navbar-brand" href="#" *ngIf="usserLogged|async as user" (click)="logout()" >
         <img style="border-radius: 100%" *ngIf="user.photoURL" src="{{user.photoURL}}"
         width="30" height="30">
         Salir

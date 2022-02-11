@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GraficasRoutingModule } from './graficas-routing.module';
 import { GraficasComponent } from './graficas.component';
 
-import { ChartModule } from 'angular-highcharts';
-
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,7 @@ import { ChartModule } from 'angular-highcharts';
   imports: [
     CommonModule,
     GraficasRoutingModule,
-    ChartModule
+    HighchartsChartModule,
 
   ]
 })

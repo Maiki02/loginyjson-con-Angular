@@ -15,7 +15,7 @@ import {DataTablesModule} from 'angular-datatables';
 import {HttpClientModule} from '@angular/common/http';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
-import * as Highcharts from 'highcharts';
+
 
 @NgModule({
   declarations: [
