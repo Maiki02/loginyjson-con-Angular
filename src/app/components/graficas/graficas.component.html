@@ -1,5 +1,11 @@
-<highcharts-chart class="mt-5"
+
+<ng-container *ngIf="chartOptions">
+
+  <highcharts-chart class="mt-5"
   [Highcharts]="Highcharts"
   [options]="chartOptions"
 
   style="width: 50%; height: 400px; display: block;"></highcharts-chart>
+
+</ng-container>
+

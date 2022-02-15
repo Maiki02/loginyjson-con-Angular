@@ -24,8 +24,9 @@ export class PersonsComponent implements OnInit, OnDestroy {
       //pagingType: 'full_numbers'
     };
 
-    this.personSvc.getPersons().pipe(
-      tap((persons: Person[]) => this.persons = persons )).subscribe();
+  this.personSvc.getPersons().pipe(
+    tap((persons: Person[]) => this.persons = persons )).subscribe();
+
   }
 
   ngOnDestroy(): void {
