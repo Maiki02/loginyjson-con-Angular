@@ -1,8 +1,9 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import {Point} from '../interface/point.interface';
-
+import { Datos } from '../interface/datos.interface ';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import {Point} from '../interface/point.interface';
 
 export class PointsService {
   private apiUrl='http://localhost:3000/';
+  private apiHttp='';
   constructor(private http: HttpClient) { }
 
   getProyeccion(): Observable<Point[]>{
@@ -22,5 +24,9 @@ export class PointsService {
 
   getEjecucion(): Observable<Point[]>{
     return this.http.get<Point[]>(this.apiUrl+"ejecucion");
+  }
+
+  getAll(): Observable<Datos[]>{
+    return this.http.get<Datos[]>(this.apiHttp);
   }
 }

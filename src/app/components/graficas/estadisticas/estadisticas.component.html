@@ -1,0 +1,35 @@
+
+  <div class="informacion right mt-2">
+    <div class="tarjeta-atraso">
+      <mat-card class="card-atraso">
+        <mat-card-title
+          >Atraso
+
+          <mat-icon>alarm</mat-icon>
+        </mat-card-title>
+        <mat-card-content>{{ obra.atraso }}</mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="tarjeta-porcentaje mt-4">
+      <mat-card class="card-porcentaje">
+        <mat-card-title
+          >Porcentaje
+
+          <mat-icon>category</mat-icon>
+        </mat-card-title>
+        <mat-card-content>{{ obra.porcentajeConstruido }}%</mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="tarjeta-bloques-certificados mt-4">
+      <mat-card class="card-bloques-certificados">
+        <mat-card-title
+          >Bloques certificados
+
+          <mat-icon>check_box</mat-icon>
+        </mat-card-title>
+        <mat-card-content>{{ obra.bloquesCertificados }}</mat-card-content>
+      </mat-card>
+    </div>
+  </div>

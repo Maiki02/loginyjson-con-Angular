@@ -1,11 +1,20 @@
+<div class="container mt-5">
+  <div class="tabla left">
+    <ng-container *ngIf="chartOptions">
+      <mat-card class="tarjeta-grafica" color="primary">
+        <highcharts-chart
+          class="grafica"
+          [Highcharts]="Highcharts"
+          [options]="chartOptions"
+        ></highcharts-chart>
+      </mat-card>
+    </ng-container>
+  </div>
 
-<ng-container *ngIf="chartOptions">
+  <div class="right">
 
-  <highcharts-chart class="mt-5"
-  [Highcharts]="Highcharts"
-  [options]="chartOptions"
+  <app-estadisticas [obra]="obra"></app-estadisticas>
+  </div>
 
-  style="width: 50%; height: 400px; display: block;"></highcharts-chart>
 
-</ng-container>
-
+</div>

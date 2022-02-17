@@ -1,4 +1,4 @@
 export interface Point {
-    EjeX:number;
+    EjeX:string;
     EjeY:number;
 }

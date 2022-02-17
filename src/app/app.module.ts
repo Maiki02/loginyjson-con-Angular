@@ -1,4 +1,8 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import localeEs from '@angular/common/locales/es';
+import localeEsAr from '@angular/common/locales/es-AR';
+import { registerLocaleData } from '@angular/common';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +21,7 @@ import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
 
 
+registerLocaleData(localeEsAr, 'es');
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HighchartsChartModule
 
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue:'es'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
