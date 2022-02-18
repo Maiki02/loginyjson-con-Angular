@@ -19,6 +19,7 @@ import {DataTablesModule} from 'angular-datatables';
 import {HttpClientModule} from '@angular/common/http';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { TiempoComponent } from './components/tiempo/tiempo.component';
 
 
 registerLocaleData(localeEsAr, 'es');
@@ -28,7 +29,8 @@ registerLocaleData(localeEsAr, 'es');
     NavbarComponent,
     InicioComponent,
     LoginComponent,
-    PersonsComponent
+    PersonsComponent,
+    TiempoComponent
   ],
   imports: [
     BrowserModule,

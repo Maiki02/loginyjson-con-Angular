@@ -1,0 +1,14 @@
+<div class="container mt-5">
+<mat-card class="tiempo-card">
+  <mat-card-title>El tiempo</mat-card-title>
+  <mat-card-content class="text-contenido">{{clima.temperature}}°, {{clima.text}}.<br>
+    Humedad del: {{clima.humidity}}%</mat-card-content>
+
+</mat-card>
+
+<table mat-table *ngFor="let datosDelDia of datos" matSort
+    class="mat-elevation-z8">
+
+</table>
+
+</div>
