@@ -1,4 +1,4 @@
-import { Clima } from './../interface/clima.interface';
+import { Clima, Tiempo } from './../interface/clima.interface';
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -13,8 +13,8 @@ export class ClimaService {
 
   constructor(private http: HttpClient) { }
 
-  getClimas(): Observable<Clima>{
-    return this.http.get<Clima>(this.apiUrl);
+  getClimas(): Observable<Tiempo>{
+    return this.http.get<Tiempo>(this.apiUrl);
   }
 
 }

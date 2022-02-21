@@ -11,7 +11,7 @@ import { Datos } from '../interface/datos.interface ';
 
 export class PointsService {
   private apiUrl='http://localhost:3000/';
-  private apiHttp='';
+  private apiHttp='http://localhost:3200/';
   constructor(private http: HttpClient) { }
 
   getProyeccion(): Observable<Point[]>{

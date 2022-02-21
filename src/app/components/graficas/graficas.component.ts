@@ -40,10 +40,11 @@ export class GraficasComponent implements OnInit {
     //this.cargarValores();
 
     //Se cargan los datos desde un solo archivo json con sus respectivos valores
-    this.cargarData();
+    //this.cargarData();
 
     //Se cargan los datos desde un http con datos de un archivo json;
-    //this.cargarDataDesdeHttpGet();
+    this.cargarDataDesdeHttpGet();
+
   }
 
   ngOnInit() {
@@ -65,7 +66,6 @@ export class GraficasComponent implements OnInit {
         tap((dataTabla: Datos[]) => {
           let puntos = dataTabla[0].Datos;
           for (let i = 0; i < puntos.length; i++) {
-            console.log(new Date(puntos[i].EjeX).toDateString());
             this.planificacionConFecha.push([
               //new Date(puntos[i].EjeX).toDateString(),
               this.pasarFechaAEspanol(puntos[i].EjeX),
@@ -75,7 +75,6 @@ export class GraficasComponent implements OnInit {
 
           puntos = dataTabla[1].Datos;
           for (let i = 0; i < puntos.length; i++) {
-            console.log(new Date(puntos[i].EjeX).toDateString());
             this.proyeccionConFecha.push([
               //new Date(puntos[i].EjeX).toDateString(),
 
@@ -86,7 +85,6 @@ export class GraficasComponent implements OnInit {
 
           puntos = dataTabla[2].Datos;
           for (let i = 0; i < puntos.length; i++) {
-            console.log(new Date(puntos[i].EjeX).toDateString());
             this.ejecucionConFecha.push([
               //new Date(puntos[i].EjeX).toDateString(),
               this.pasarFechaAEspanol(puntos[i].EjeX),
@@ -334,7 +332,7 @@ export class GraficasComponent implements OnInit {
 
   //Dada una fecha en formato MM/DD/YYYY, toma cada elemento y la pasa al español en
   //formato humano legible en Español.
-  pasarFechaAEspanol(fecha: string) {
+  public pasarFechaAEspanol(fecha: string) {
     const meses = [
       'Ene',
       'Feb',
